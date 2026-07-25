@@ -1,0 +1,26 @@
+name: Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        # Windows first since that's what I actually develop on.
+        # Ubuntu's here too just to double-check it's not secretly
+        # relying on anything Windows-only.
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: "5.9"
+
+      - name: Run tests
+        run: swift test
