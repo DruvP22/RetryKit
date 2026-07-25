@@ -48,27 +48,6 @@ let data = try await retrier.run(
 }
 ```
 
-## Project Structure
-
-```text
-RetryKit/
-├── Package.swift
-├── README.md
-├── .gitignore
-├── .github/
-│   └── workflows/
-│       └── tests.yml
-├── Sources/
-│   └── RetryKit/
-│       ├── Sleeper.swift
-│       ├── RetryPolicy.swift
-│       └── Retrier.swift
-└── Tests/
-    └── RetryKitTests/
-        ├── RetryPolicyTests.swift
-        └── RetrierTests.swift
-```
-
 ## What the Tests Cover
 
 There are 11 tests across two files.
