@@ -4,7 +4,7 @@ RetryKit is a small Swift package for retrying failed async operations, such as 
 
 ## Why I Built This
 
-Many apps need to retry requests when a server is temporarily unavailable or a request times out. RetryKit provides a reusable way to handle this without giving up immediately or sending too many requests. It can also be added to the networking layer of apps like my FinTrack app to retry failed stock quote requests.
+Many apps need to retry requests when a server is temporarily unavailable or a request times out. RetryKit provides a reusable way to handle this without giving up immediately or sending too many requests. It can also be added to the networking layer of apps to retry failed stock quote requests.
 
 ## Installation
 
